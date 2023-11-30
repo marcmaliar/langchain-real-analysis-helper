@@ -1,0 +1,11 @@
+version: '0'
+services:
+  myapp:
+    build:
+      context: .
+      dockerfile: Containerfile
+    image: myapp
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env

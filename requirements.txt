@@ -1,0 +1,10 @@
+fastapi
+langchain
+langserve
+uvicorn
+openai
+sse_starlette
+numexpr
+beautifulsoup4
+lxml
+unstructured
