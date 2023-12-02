@@ -8,3 +8,5 @@ numexpr
 beautifulsoup4
 lxml
 unstructured
+chromadb
+tiktoken
