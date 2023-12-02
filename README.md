@@ -26,10 +26,6 @@ This project is a LangChain prompt engineering application. The vision for this 
 6. ChromaDB is converted to retrieval object which is then fed into LangChain ConversationalRetrievalChain
 7. ConversationalRetrievalChain is exposed to the user via LangChain FastAPI playground
 
-## Issues
-
-See conclusions
-
 ## Conclusions
 
 1. ConversationalRetrievalChain will only answer questions based off the context. Its power is quite weak. If we want more expresiveness, we need to use a different class or write our own. However, ConversationalRetrievalChain does have use cases: when you want the LLM to answer based only off of the context, then this is the right class. You wouldn't want to hallucinate text from documents.
@@ -41,34 +37,34 @@ See conclusions
 
 I asked it to answer question 1.4.5, and it could not do so because the answer was not directly in the text: [HTML](https://mathcs.org/analysis/reals/logic/numbers.html)
 
-[Picture0](picture0.png)
+![Picture0](picture0.png)
 
 However, it did understand the question, which is great. This is because it found the right document chunk.
 
-[Retrieved documents](retrieved_documents.png)
+![Retrieved documents](retrieved_documents.png)
 
 ### I asked it to retrieve me information from the HTML
 
 Then, I asked it a question directly from the text about equivalence relations. Here is the part I wanted.
 
-[Equivalence](equivalence.png)
+![Equivalence](equivalence.png)
 
 Success!
 
-[Picture0](picture1.png)
+![Picture0](picture1.png)
 
 ### I asked it to retrieve me information about dogs not found in the documents
 
 It couldn't do it, since the information was not in the context.
 
-[Picture0](picture2.png)
+![Picture0](picture2.png)
 
 ## How to Run
 
 1. Clone the repository.
 2. Make .env file with OPENAI_API_KEY set to your open API key
 3. Run `docker-compose up --build`
-4. More coming soon
+4. Open `http://0.0.0.0:8000/test/playground/`
 
 ## License
 
